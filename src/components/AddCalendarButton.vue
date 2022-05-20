@@ -35,6 +35,8 @@ export default {
   created() {
     if (!this.hasJsInHead()) {
       this.addJsInHead();
+    } else {
+      window.addeventatc.generate()
     }
   },
   methods: {
