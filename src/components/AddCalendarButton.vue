@@ -63,6 +63,10 @@ export default {
           outlookcom: { show: true, text: "Outlook.com <em>(online)</em>" },
           yahoo: { show: true, text: "Yahoo <em>(online)</em>" },
         });
+        const style = document.createElement("style");
+        style.type = "text/css";
+        style.innerText = ".addeventatc{visibility:visible !important;}";
+        document.head.appendChild(style);
       };
       document.head.appendChild(script);
     },
