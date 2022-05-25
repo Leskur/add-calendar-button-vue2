@@ -71,7 +71,9 @@ export default {
         const style = document.createElement("style");
         style.type = "text/css";
         style.innerText = ".addeventatc{visibility:visible !important;}";
-        document.head.appendChild(style);
+        setTimeout(() => {
+          document.head.appendChild(style);
+        }, 300);
       };
       document.head.appendChild(script);
     },
