@@ -31,6 +31,12 @@ export default {
     },
     description: String,
     location: String,
+    settings: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
   },
   created() {
     if (!this.hasJsInHead()) {
@@ -58,16 +64,21 @@ export default {
       script.src = "https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js";
       script.setAttribute("async", "");
       script.setAttribute("defer", "");
-      script.onload = function () {
+      script.onload = () => {
         loading = false;
-        window.addeventatc.settings({
-          appleical: { show: true, text: "Apple Calendar" },
-          google: { show: true, text: "Google <em>(online)</em>" },
-          office365: { show: true, text: "Office 365 <em>(online)</em>" },
-          outlook: { show: true, text: "Outlook" },
-          outlookcom: { show: true, text: "Outlook.com <em>(online)</em>" },
-          yahoo: { show: true, text: "Yahoo <em>(online)</em>" },
-        });
+        window.addeventatc.settings(
+          Object.assign(
+            {
+              appleical: { show: true, text: "Apple Calendar" },
+              google: { show: true, text: "Google <em>(online)</em>" },
+              office365: { show: true, text: "Office 365 <em>(online)</em>" },
+              outlook: { show: true, text: "Outlook" },
+              outlookcom: { show: true, text: "Outlook.com <em>(online)</em>" },
+              yahoo: { show: true, text: "Yahoo <em>(online)</em>" },
+            },
+            this.settings
+          )
+        );
         const style = document.createElement("style");
         style.type = "text/css";
         style.innerText = ".addeventatc{visibility:visible !important;}";

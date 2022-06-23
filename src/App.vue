@@ -7,6 +7,7 @@
       description="描述：领导致辞--加拿大驻重庆总领事馆领导"
       location="地点：成都"
       organizerEmail="asdhgjsdg@123123.com"
+      :settings="{ appleical: { show: false } }"
     ></AddCalendarButton>
   </div>
 </template>
