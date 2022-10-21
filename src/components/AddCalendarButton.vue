@@ -95,30 +95,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.addeventatc {
-  visibility: hidden;
-  padding: 7px 11px 7px 34px;
-  font-size: 13px;
-  line-height: 18px;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
-.addeventatc:hover {
-  font-size: 13px;
-}
-
-.addeventatc /deep/ .addeventatc_icon {
-  width: 16px;
-  height: 16px;
-  top: 8px;
-  left: 10px;
-  background-size: 16px;
-}
-
-/*/deep/ .addeventatc_dropdown .copyx {*/
-/*  display: none;*/
-/*}*/
-</style>
