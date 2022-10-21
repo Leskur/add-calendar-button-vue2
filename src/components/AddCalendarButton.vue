@@ -1,5 +1,5 @@
 <template>
-  <div title="Add to Calendar" class="addeventatc">
+  <div title="Add to Calendar" class="addeventatc" v-bind="$attrs">
     <slot>添加到日历</slot>
     <span class="start">{{ start }}</span>
     <span v-if="end" class="end">{{ end }}</span>
